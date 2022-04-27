@@ -115,7 +115,7 @@ public class Containers {
 
         // Torna a recorrer la llista amb l'iterador, pero aquest cop imprimeix tambe l'index de l'element
         while (li.hasNext()) {
-            System.out.printf("Index: %d, Element: %d\n" + li.nextIndex(), li.next());
+            System.out.printf("Index: %d, Element: %d\n", li.nextIndex(), li.next());
         }
 
     }
@@ -211,8 +211,10 @@ public class Containers {
 
     static void mapes() {
         // Construeix un mapa (map) que associi un String amb un altre String
+        //Map<String> map;
 
         // Introdueix el parell: "RENAULT" - "CLIO"
+        //map.put();
 
         // Introdueix el parell: "VOLKSWAGEN" - "GOLF"
 
@@ -223,7 +225,7 @@ public class Containers {
         // Introdueix el parell: "PEUGEOT" - "RCZ"
 
         // Imprimeix el mapa
-
+        //System.out.println(map);
 
         // Treu el conjunt de claus del mapa (variable kset)
 
