@@ -115,49 +115,70 @@ public class Containers {
 
         // Torna a recorrer la llista amb l'iterador, pero aquest cop imprimeix tambe l'index de l'element
         while (li.hasNext()) {
-            System.out.printf("Index: %d, Element: %d\n"
-                    + li.nextIndex(), li.next());
+            System.out.printf("Index: %d, Element: %d\n" + li.nextIndex(), li.next());
         }
 
     }
 
     static void cues() {
         // Declara una cua (anomenada "cua") com una LinkedList
+        Queue<Integer> queue = new LinkedList<>();
 
         // Afegeix els elements 12, 14 i 99 a la cua
+        queue.offer(12);
+        queue.offer(14);
+        queue.offer(99);
 
         // Mostra el primer element (sense treurer-lo) de la cúa i imprimeix-ho
+        System.out.println(queue.peek());
 
         // Treu el primer element de la cúa
+        queue.poll();
 
         // Imprimeix la cúa
-
+        System.out.println(queue);
 
         // Declara una cúa de prioritat anomenada "cuaPrioritat"
+        Queue<Integer> cuaPrioritat = new PriorityQueue<Integer>();
 
         // Afegeix els elements 5, 2, -1, 9 i 7
+        cuaPrioritat.addAll(List.of(5, 2, -1, 9, 7));
 
         // Imprimeix la cúa
+        System.out.println(cuaPrioritat);
 
         // Fes un bucle que vagi traient cada element i l'imprimeixi de la cúa de prioritat, mentre en quedin
-
+        while (cuaPrioritat.size() > 0) {
+            System.out.println(cuaPrioritat.poll());
+        }
     }
 
     static void piles() {
         // Declara una pila (stack) com una LinkedList
+        LinkedList<Integer> stack = new LinkedList<>();
 
         // Push a la pila dels valors 15, 56, 21 i -5
+        stack.push(15);
+        stack.push(56);
+        stack.push(21);
+        stack.push(-5);
 
         // Imprimeix la pila
+        System.out.println(stack);
 
         // Imprimeix el valor de damunt la pila, sense treurer-lo
+        System.out.println(stack.peek());
 
         // Treu i imprimeix els valors de la pila
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
 
     }
 
     static void conjunts() {
         // Declara un conjunt d'enters anomenat "set"
+
 
         // Afegeix els elements 14, 6 i 3
 
