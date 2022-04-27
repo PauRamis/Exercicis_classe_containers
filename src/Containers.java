@@ -173,29 +173,40 @@ public class Containers {
         while (!stack.isEmpty()) {
             System.out.println(stack.pop());
         }
-
     }
 
     static void conjunts() {
         // Declara un conjunt d'enters anomenat "set"
-
+        Set<Integer> set = new HashSet<>();
 
         // Afegeix els elements 14, 6 i 3
+        set.addAll(List.of(15, 6, 3));
 
         // Imprimeix el conjunt
+        System.out.println(set);
 
         // Afegeix l'element 6 un altre cop
+        set.add(6);
 
         // Imprimeix el conjunt
-
+        System.out.println(set);
 
         // Construeix un conjunt de caràcters anomenat set2 (Usa la class Character, no char)
         // i introdueix totes les lletres de la paraula "ESTERNOCLEIDOMASTOIDEO"
         // Després, imprimeix el conjunt
+        Set<Character> set2 = new HashSet<>();
+        String s = "ESTERNOCLEIDOMASTOIDEO";
+        for (char c : s.toCharArray()) {
+            set2.add(c);
+        }
+        System.out.println(set2);
 
-
-        // Empra un iterador (it) per recórrer tot el conjunt de caràcters anterior i imprimeix element a element
-
+        // Empra un iterador (it) per recórrer tot el conjunt de caràcters anterior
+        // i imprimeix element a element
+        Iterator<Character> it = set2.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
     }
 
     static void mapes() {
