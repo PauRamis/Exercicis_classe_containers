@@ -76,24 +76,48 @@ public class Containers {
 
     static void iterators() {
         // Crea llista d'enters anomenada "l1"
+        List<Integer> l1 = new ArrayList<Integer>();
 
         // Afegeix a l1 els elements 10, 20, 50 i 90
+        java.util.Collections.addAll(l1, 10, 20, 50, 90);
 
         // Treu Iterator (it)
+        Iterator<Integer> it = l1.iterator();
 
         // Mentre hi hagi element següent, imprimeix l'element
-
+        while (it.hasNext()) {
+            Integer n = it.next();
+            System.out.println(n);
+        }
         // Torna a crear l'objecte iterator i has de recórrer la llista, però has d'esborrar l'element "50"
- 
+        it = l1.iterator();
+        while (it.hasNext()) {
+            if (it.next() == 50) {
+                it.remove();
+            }
+        }
+
         // Imprimeix la llista
+        System.out.println(l1);
 
         // Crea un ListIterator de la llista l1 (anomenat "li")
- 
+        ListIterator<Integer> li = l1.listIterator();
+
         // Avança l'iterador fins al final de la llista
+        while (li.hasNext()) {
+            li.next();
+        }
 
         // Recorre la llista al reves amb l'iterador, imprimint els elements
+        while (li.hasPrevious()) {
+            System.out.println(li.previous());
+        }
 
         // Torna a recorrer la llista amb l'iterador, pero aquest cop imprimeix tambe l'index de l'element
+        while (li.hasNext()) {
+            System.out.printf("Index: %d, Element: %d\n"
+                    + li.nextIndex(), li.next());
+        }
 
     }
 
