@@ -26,41 +26,52 @@ public class Containers {
         java.util.Collections.addAll(l1, 10, 20, 15);
 
         // Imprimeix la llista
-        String Slist = l1.toString();
-        System.out.println(Slist);
+        System.out.println("l1 = " + l1.toString());
 
         // Elimina el segon element
         l1.remove(1);
 
         // Imprimeix la llista
-
+        System.out.println("l1 = " + l1.toString());
 
         // Crea llista d'enters anomenada "l2"
- 
+        List<Integer> l2 = new ArrayList<Integer>();
+
         // Afegeix els números 3, 6 i 9
- 
+        java.util.Collections.addAll(l2, 3, 6, 9);
+
         // Afegeix la llista l1 a la llista l2
+        l2.addAll(l1);
 
         // Imprimeix la llista l2
+        System.out.println("l2 = " + l2.toString());
 
         // Elimina tots els valors de l1
+        l1.removeAll(l1);
 
         // Afegeix els tres primers elements de l2 a l1
+        l1.addAll(l2.subList(0, 3));
 
         // Comprova si dins l1 hi ha el número 6
+        System.out.println("l2 " + (l1.contains(6) ? "conté" : "no conté") + " el 6");
 
         // Afegeix el numero 6 un altre cop a l1 al principi de la llista
+        l1.add(0, 6);
 
         // Cerca la posicio de l'element que te el numero 9 a la llista l1
+        System.out.println("la posició del 9 és " + l1.indexOf(9));
 
         // A l1, substitueix l'element a la posició 1 per el valor 5
+        l1.set(1, 5);
 
         // A l1, insereix a la posició 2 l'element 4
+        l1.add(2, 4);
 
         // Imprimeix la llista l1
+        System.out.println("l1 = " + l1.toString());
 
         // Converteix l1 a array i imprimeix-ho
-
+        Integer[] ar = l1.toArray(new Integer[0]);
     }
 
     static void iterators() {
